@@ -102,3 +102,16 @@ input[type="submit"] {
 textarea {
     resize: vertical;
 }
+
+.form-popup {
+    display: none; /* Hide the popup by default */
+    position: fixed; /* Position it fixed relative to the viewport */
+    top: 50%; /* Position it vertically at the center */
+    left: 50%; /* Position it horizontally at the center */
+    transform: translate(-50%, -50%); /* Center the popup precisely */
+    width: 400px; /* Set the width of the popup */
+    height: 300px; /* Set the height of the popup */
+    background-color: #f9f9f9; /* Set the background color */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 20px; /* Add some padding */
+}
