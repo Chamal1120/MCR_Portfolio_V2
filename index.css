@@ -127,9 +127,7 @@ h3 {
 .heading-primary {
     line-height: 1;
     font-size: var(--font-size-huge);
-    color: #0f0431;
-    background-color: white;
-    padding: 5px 5px 5px 20px;
+    color: #e2d6ff;
     font-weight: 400;
 }
 
@@ -179,6 +177,7 @@ p {
 
 .header__text-special-p{
     color: #ffffff;
+    text-align: center;
 }
 
 @media(max-width: 900px) {
