@@ -216,6 +216,10 @@ body:not(.user-is-tabbing) a:focus {
     color: var(--pink);
 }
 
+.btn-group {
+    display: flex;
+}
+
 .btn {
     position: relative;
     display: inline-block;
@@ -224,6 +228,7 @@ body:not(.user-is-tabbing) a:focus {
     color: inherit;
     border: 1px solid  var(--pink);
     font-weight: 400;
+    margin-right: 1rem;
 }
 
 .btn:focus {
@@ -261,6 +266,31 @@ body:not(.user-is-tabbing) a:focus {
 .btn--pink:hover,
 .btn--pink:focus {
     background: transparent;
+}
+
+.btn--pink2 {
+    background: var(--pink);
+    transition: all 0.2s;
+}
+
+.btn--pink2::after {
+    display: none;
+}
+
+.btn--pink2:hover,
+.btn--pink2:focus {
+    background: transparent;
+}
+
+@media(max-width: 500px) {
+    .btn-group {
+        display: unset;
+        font-size: 12px;
+        margin-top: 5rem;
+    }
+    .btn--pink {
+        margin-bottom: 3rem;
+    }
 }
 
 .link__text {
