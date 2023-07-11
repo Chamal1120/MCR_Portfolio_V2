@@ -339,9 +339,16 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: var(--gutter-normal) 0;
+    padding: var(--gutter-normal) 30px;
+    background-color: rgba(15, 4, 49, 0.72);
+    backdrop-filter: blur(10px);
+    z-index: 100;
 }
 
 .nav__items {
@@ -407,19 +414,19 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
-    url('./images/header.jpg');
+    background: #0f0431;
     height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 70%;
     font-size: var(--font-size-normal);
 }
 
 .header__text {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
+}
+
+.header__text-hi {
+    margin-bottom: 3rem;
 }
 
 .header__text p {
@@ -432,12 +439,22 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .header {
         text-align: center;
+        height: 70vh;
     }
 
-    .header__text p {
-        transform: scale(.8);
+    .header__text-box {
+        position: relative;
+        top: 55%;
+        right: 5%;
+        padding: 30px;
+        transform: translateY(-50%);
+    }
+
+    .header__text-hi{
+        margin-bottom: 5rem;
     }
 }
+
 
 /* --------------------------------------- */
 /* ----- Work ----- */
@@ -475,7 +492,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__list {
-    /* list-style-type: square; */
     list-style-position: inside;
     margin-bottom: var(--gutter-normal);
 }
@@ -570,34 +586,6 @@ body:not(.user-is-tabbing) a:focus {
         height: 4rem;
     }
 }
-
-/* --------------------------------------- */
-/* ----- Clients ----- */
-/* --------------------------------------- */
-
-/*.client__logos {
-    display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
-}
-
-.client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
-}
-
-@media(max-width: 1240px) {
-    .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
-    }
-
-    .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
-    }
-}*/
-
-
 
 /* --------------------------------------- */
 /* ----- About ----- */
